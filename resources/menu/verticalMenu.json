@@ -46,12 +46,6 @@
       "menuHeader": "Orders"
     },
     {
-      "url": "delivery/orders/all",
-      "name": "All Order",
-      "icon": "menu-icon tf-icons bx bx-food-menu",
-      "slug": "delivery-Order-all"
-    },
-    {
       "url": "delivery/orders/new",
       "name": "New order",
       "icon": "menu-icon tf-icons bx bx-user",
@@ -121,13 +115,13 @@
       "url": "delivery/team/employee",
       "name": "Employee",
       "icon": "menu-icon tf-icons bx bx-box",
-      "slug": "delivery-Team_customer"
+      "slug": "delivery-Team_employee"
     },
     {
       "url": "delivery/team/customer",
       "name": "Customer",
       "icon": "menu-icon tf-icons bx bx-copy",
-      "slug": "delivery-Team_employee"
+      "slug": "delivery-Team_customer"
     },
     {
       "menuHeader": "Finance"
@@ -197,6 +191,12 @@
       "icon": "menu-icon tf-icons bx bx-table",
       "name": "Shop-Details",
       "slug": "delivery-Settings_shop_detail"
+    },
+    {
+      "url": "delivery/settings/order-setup",
+      "icon": "menu-icon tf-icons bx bx-table",
+      "name": "Order-Setup",
+      "slug": "delivery-Settings_order-setup"
     }
   ],
   "submenu": [

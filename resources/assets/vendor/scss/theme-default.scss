@@ -61,8 +61,8 @@ $primary-color: #696cff;
   }
 
   // menu item open(vertical) & hover (vertical & horizontal)
-  .menu-inner .menu-item.open > .menu-link,
-  .menu-inner .menu-item .menu-link:not(.active):hover {
+  .menu-item.open > .menu-link,
+  .menu-item .menu-link:not(.active):hover {
     html:not(.layout-menu-collapsed) &,
     .layout-menu-hover.layout-menu-collapsed & {
       background-color: rgba($black, 0.04);
@@ -78,12 +78,12 @@ $primary-color: #696cff;
     }
   }
   // menu item active
-  .menu-inner > .menu-item.active > .menu-link {
+   .menu-item.active > .menu-link {
     color: $primary-color;
     background-color: rgba($primary-color, 0.16) !important;
   }
 
-  .menu-inner > .menu-item.active:before {
+   .menu-item.active:before {
     background: $primary-color;
   }
 

@@ -20,7 +20,7 @@
 @endsection
 
 @section('content')
-    <h5 class="py-3 mb-4"><span class="text-muted fw-light">Delivery / Settings / </span>Working Time</h5>
+    <h5 class="py-3 mb-4"><span class="text-muted fw-light">Delivery / Settings / </span>Order Setup</h5>
 
     <div class="row g-4">
 
@@ -53,7 +53,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link active" href="">
                             <i class="bx bx-package me-2"></i>
                             <span class="align-middle">Order Setup</span>
                         </a>
@@ -100,7 +100,7 @@
                             <span class="align-middle">Theme</span>
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="">
                             <i class="bx bx-timer me-2"></i>
                             <span class="align-middle">Time Slots</span>
@@ -137,76 +137,64 @@
                 <div class="tab-pane fade show active" id="store_details" role="tabpanel">
                     <div class="card">
                         <div class="card-header d-flex align-items-center justify-content-between">
-                            <h5 class="mb-0">Company</h5>
+                            <h5 class="mb-0">Order Setup</h5>
                         </div>
                         <div class="card-body mt-3">
                             <form>
-                                <div class="row mb-3 g-3">
-                                    <div class="col-12 col-md-6"><label class="form-label mb-0" for="settings-name">Name
-                                            *</label>
-                                        <input type="text" class="form-control" id="settings-name" placeholder=""
-                                            name="settingsDet" aria-label="settings Details">
-                                    </div>
-
-                                    <div class="col-12 col-md-6"><label class="form-label mb-0"
-                                            for="ecommerce-settings-details-phone">Email *</label>
-                                        <input type="tel" class="form-control phone-mask"
-                                            id="ecommerce-settings-details-phone" placeholder="" name="phone"
-                                            aria-label="phone">
-                                    </div>
-
-                                    <div class="col-12 col-md-6"><label class="form-label mb-0"
-                                            for="ecommerce-settings-details-email">Phone *</label>
-                                        <input type="text" class="form-control" id="ecommerce-settings-details-email"
-                                            placeholder="" name="email" aria-label="email">
-                                    </div>
-
-                                    <div class="col-12 col-md-6"><label class="form-label mb-0"
-                                            for="ecommerce-settings-sender-email">website</label>
-                                        <input type="text" class="form-control" id="ecommerce-settings-sender-email"
-                                            placeholder="" name="sender_email" aria-label="sender email">
-                                    </div>
-                                </div>
-                                <div class="row mb-3 g-3">
-                                    <div class="col-12 col-md-6"><label class="form-label mb-0"
-                                            for="ecommerce-settings-details-name">City *</label>
-                                        <input type="text" class="form-control" id="ecommerce-settings-details-name"
-                                            placeholder="" name="settingsDet" aria-label="settings Details">
-                                    </div>
-
-                                    <div class="col-12 col-md-6"><label class="form-label mb-0"
-                                            for="ecommerce-settings-details-phone">State *</label>
-                                        <input type="tel" class="form-control phone-mask"
-                                            id="ecommerce-settings-details-phone" placeholder="" name="phone"
-                                            aria-label="phone">
-                                    </div>
-
-                                    <div class="col-12 col-md-6"><label class="form-label mb-0"
-                                            for="ecommerce-settings-details-email">Country Code *</label>
-                                        <select class="form-control" id="ecommerce-settings-details-email" placeholder=""
-                                            name="email" aria-label="email">
-                                            <option></option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-12 col-md-6"><label class="form-label mb-0"
-                                            for="ecommerce-settings-sender-email">Zip Code *</label>
-                                        <input type="text" class="form-control" id="ecommerce-settings-sender-email"
-                                            placeholder="" name="sender_email" aria-label="sender email">
-                                    </div>
-                                </div>
                                 <div class="row mb-3">
-                                    <div class="col-12 col-md-12">
-                                        <label class="col-sm-2 col-form-label" for="basic-default-message">Address</label>
+                                    <div class="col-6 col-md-6">
+                                        <label class="form-label mb-0" for="ecommerce-settings-details-email">FREE
+                                            FOOD PREPARATION TIME ( IN MINUTE )
+                                            *</label>
                                         <div class="col-sm-12">
-                                            <textarea id="basic-default-message" class="form-control" placeholder="" rows="5"
-                                                aria-label="Hi, Do you have a moment to talk Joe?" aria-describedby="basic-icon-default-message2"></textarea>
+                                            <input type="text" class="form-control"
+                                                id="ecommerce-settings-details-email" placeholder="" name="email"
+                                                aria-label="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-6">
+                                        <label class="form-label mb-0" for="ecommerce-settings-details-email">BASIC
+                                            SCHEDULE ORDER SLOT DURATION ( IN MINUTE )
+                                            *</label>
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control"
+                                                id="ecommerce-settings-details-email" placeholder="" name="DURATION"
+                                                aria-label="email">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row mb-4">
+                                    <div class="col-6 col-md-6">
+                                        <label class="form-label mb-0" for="ecommerce-settings-details-email">BASIC
+                                            TAKEAWAY
+                                            *</label>
+                                        <div class="form-group  p-2 mt-3">
+                                            <label class="me-2"> <input type="radio" id="active" class="me-2"
+                                                    value="Active"> Enable
+                                            </label>
+                                            <label> <input type="radio" id="inactive" class="me-2" value="">
+                                                Disable
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-6">
+                                        <label class="form-label mb-0" for="ecommerce-settings-details-email">BASIC
+                                            DELIVERY
+                                            *</label>
+                                        <div class="form-group  p-2 mt-3">
+                                            <label class="me-2"> <input type="radio" id="active" class="me-2"
+                                                    value="Active"> Enable
+                                            </label>
+                                            <label> <input type="radio" id="inactive" class="me-2" value="">
+                                                Disable
+                                            </label>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
                                 <div class="row justify-content-end">
                                     <div class="col-sm-12">
                                         <button type="submit" class="btn btn-primary"><i

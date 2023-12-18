@@ -226,6 +226,7 @@
 .modal-top {
   .modal-dialog {
     margin-top: 0;
+    height: 100vh;
   }
 
   .modal-content {
@@ -317,12 +318,12 @@
 // Slide from Top
 .modal-top.fade .modal-dialog,
 .modal-top .modal.fade .modal-dialog {
-  transform: translateY(-100%);
+  transform: translateX(100%);
 }
 
 .modal-top.show .modal-dialog,
 .modal-top .modal.show .modal-dialog {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 // Transparent

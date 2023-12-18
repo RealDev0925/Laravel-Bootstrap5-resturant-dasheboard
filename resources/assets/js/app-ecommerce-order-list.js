@@ -43,7 +43,7 @@ $(function () {
       columns: [
         // columns according to JSON
         { data: 'id' },
-        { data: 'id' },
+        // { data: 'id' },
         { data: 'order' },
         { data: 'date' },
         { data: 'customer' }, //email //avatar
@@ -64,18 +64,18 @@ $(function () {
             return '';
           }
         },
-        {
-          // For Checkboxes
-          targets: 1,
-          orderable: false,
-          checkboxes: {
-            selectAllRender: '<input type="checkbox" class="form-check-input">'
-          },
-          render: function () {
-            return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
-          },
-          searchable: false
-        },
+        // {
+        //   // For Checkboxes
+        //   targets: 1,
+        //   orderable: false,
+        //   checkboxes: {
+        //     selectAllRender: '<input type="checkbox" class="form-check-input">'
+        //   },
+        //   render: function () {
+        //     return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
+        //   },
+        //   searchable: false
+        // },
         {
           // Order ID
           targets: 2,
@@ -85,7 +85,7 @@ $(function () {
             var $row_output =
               '<a href=" ' +
               baseUrl +
-              'app/ecommerce/order/details"><span class="fw-medium">#' +
+              '"><span class="fw-medium">#' +
               $order_id +
               '</span></a>';
             return $row_output;
@@ -220,9 +220,7 @@ $(function () {
               '<div class="d-flex justify-content-sm-center align-items-sm-center">' +
               '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>' +
               '<div class="dropdown-menu dropdown-menu-end m-0">' +
-              '<a href=" ' +
-              baseUrl +
-              'app/ecommerce/order/details" class="dropdown-item">View</a>' +
+              '<a href="/delivery/orders/detail" class="dropdown-item">View</a>' +
               '<a href="javascript:0;" class="dropdown-item delete-record">' +
               'Delete' +
               '</a>' +

@@ -9,7 +9,7 @@ use App\Http\Controllers\delivery\Pos_Cashier;
 use App\Http\Controllers\delivery\FD_Item;
 use App\Http\Controllers\delivery\FD_Drinks;
 use App\Http\Controllers\delivery\FD_Kiosk;
-use App\Http\Controllers\delivery\Order_all;
+use App\Http\Controllers\delivery\Order_detail;
 use App\Http\Controllers\delivery\Order_new;
 use App\Http\Controllers\delivery\Order_pending;
 use App\Http\Controllers\delivery\Order_delivered;
@@ -32,6 +32,8 @@ use App\Http\Controllers\delivery\Settings_delivery_area;
 use App\Http\Controllers\delivery\Settings_working_time;
 use App\Http\Controllers\delivery\Settings_qrcode;
 use App\Http\Controllers\delivery\Settings_shop_detail;
+use App\Http\Controllers\delivery\Settings_order_setup;
+
 // Resturant Controller
 use App\Http\Controllers\resturant\RES_pos_system;
 use App\Http\Controllers\resturant\RES_pos_setting;
@@ -78,7 +80,7 @@ Route::get( '/delivery/pos-system/cashier', [ Pos_Cashier::class, 'index' ] )->n
 Route::get( '/delivery/FD/items', [ FD_Item::class, 'index' ] )->name( 'delivery-fd-item' );
 Route::get( '/delivery/FD/drinks', [ FD_Drinks::class, 'index' ] )->name( 'delivery-fd-drinks' );
 Route::get( '/delivery/FD/kiosk', [ FD_Kiosk::class, 'index' ] )->name( 'delivery-fd-kiosk' );
-Route::get( '/delivery/orders/all', [ Order_all::class, 'index' ] )->name( 'delivery-Order-all' );
+Route::get( '/delivery/orders/detail', [ Order_detail::class, 'index' ] )->name( 'delivery-Order-detail' );
 Route::get( '/delivery/orders/new', [ Order_new::class, 'index' ] )->name( 'delivery-Order_new' );
 Route::get( '/delivery/orders/pending', [ Order_pending::class, 'index' ] )->name( 'delivery-Order_pendig' );
 Route::get( '/delivery/orders/delivered', [ Order_delivered::class, 'index' ] )->name( 'delivery-Order_delivered' );
@@ -101,7 +103,7 @@ Route::get( '/delivery/settings/delivery_area', [ Settings_delivery_area::class,
 Route::get( '/delivery/settings/working_time', [ Settings_working_time::class, 'index' ] )->name( 'delivery-Settings_working_time' );
 Route::get( '/delivery/settings/qr_code', [ Settings_qrcode::class, 'index' ] )->name( 'delivery-Settings_qrcode' );
 Route::get( '/delivery/settings/shop_details', [ Settings_shop_detail::class, 'index' ] )->name( 'delivery-Settings_shop_detail' );
-
+Route::get( '/delivery/settings/order-setup', [ Settings_order_setup::class, 'index' ] )->name( 'delivery-Settings_order-setup' );
 //resturant
 Route::get( '/resturant/pos-system/system', [ RES_pos_system::class, 'index' ] )->name( 'resturant-pos-system-system' );
 Route::get( '/resturant/pos-system/settings', [ RES_pos_setting::class, 'index' ] )->name( 'resturant-pos-system-setting' );

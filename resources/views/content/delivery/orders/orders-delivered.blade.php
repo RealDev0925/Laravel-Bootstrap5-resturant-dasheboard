@@ -1,34 +1,45 @@
 @extends('layouts/layoutMaster')
 
-@section('title', 'Orders delivered')
+@section('title', 'Orders Delivered Order')
 
 @section('vendor-style')
-    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.css') }}" />
-@endsection
-
-@section('page-style')
-    <link rel="stylesheet" href="{{ asset('assets/vendor/css/pages/app-chat.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css') }}" />
 @endsection
 
 @section('vendor-script')
-    <script src="{{ asset('assets/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js') }}"></script>
 @endsection
 
 @section('page-script')
-    <script src="{{ asset('assets/js/app-chat.js') }}"></script>
+    <script src="{{ asset('assets/js/app-ecommerce-order-list.js') }}"></script>
 @endsection
 
 @section('content')
-    <div class="app-chat overflow-hidden card">
-        <div class="row g-0">
-            <!-- this is pos-system page!! -->
-            <div class="text-center m-1 p-5">
-                <h1>
-                    This is Orders delivered page!
-                </h1>
-            </div>
+    <h4 class="py-3 mb-4">
+        <span class="text-muted fw-light">Order /</span> Delivered Order
+    </h4>
 
-            <div class="app-overlay"></div>
+    <!-- Order List Table -->
+    <div class="card">
+        <div class="card-datatable table-responsive">
+            <table class="datatables-order table border-top">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>order</th>
+                        <th>date</th>
+                        <th>customers</th>
+                        <th>payment</th>
+                        <th>status</th>
+                        <th>method</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
+
 @endsection
